@@ -1,0 +1,275 @@
+---
+title: "EDI_FFDiet_DataJoining"
+author: "S. G. Glancy"
+date: "11/17/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+require(utils)
+require(tibble)
+require(dplyr)
+require(ggplot2)
+require(lubridate)
+require(janitor)
+require(tidyverse)
+
+require(readr)
+
+Concat_Count <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Count.csv")
+View(Concat_Count)
+
+Concat_Meas <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Meas.csv")
+View(Concat_Meas)
+
+Station_lookup_truncate2 <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Station_lookup_truncate2.csv")
+```
+need to change BEGIN_GMT_TOWDATE in ISO 8601 format, YYYY-MM-DD HH:MM:SS
+
+```{r}
+# from Kate
+#nutrients_input$datetime <- as.POSIXct(nutrients_input$datetime, format="%Y-%m-%d %H:%M:%OS")
+
+#Station_lookup_truncate2$BEGIN_GMT_TOWDATE <-
+#  as.POSIXct.Date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, format= "%Y-%m-%d %H:%M:%OS")
+
+#Station_lookup_truncate2$BEGIN_GMT_TOWDATE <-
+#  as.POSIXct.Date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, format= "%Y-%m-%d %H:%M")
+
+#Station_lookup_truncate2$BEGIN_GMT_TOWDATE <-
+#  as.POSIXct.Date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, format= "%m-%d-%Y %H:%M")
+
+#Station_lookup_truncate2$BEGIN_GMT_TOWDATE <-
+#  as.POSIXct.Date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, 
+#              precision =ymdhm)
+
+#format_ISO8601(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = NULL)
+
+
+#format_ISO8601(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = ymdhm
+
+#format_ISO8601(as.POSIXct.date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = NULL))
+
+
+#format_ISO8601(as.POSIXct.date(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = ymdhm)
+
+#format_ISO8601(as.POSIXct(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = NULL))
+
+
+#format_ISO8601(as.POSIXct(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, usetz = FALSE, precision = ymdhm))
+
+
+Station_lookup_truncate2$BEGIN_GMT_TOWDATE <- parse_date_time(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, "mdyHM")
+
+view(Station_lookup_truncate2)
+```
+
+read in CSVs for data (measurements and counts) and for station (data from NOAA
+) using readr
+
+JOin based on cruise number and station number. 
+
+for join() in R need same column headers. 
+
+change column headers in station table from CRUISE6 to "Cruise" and STATION to "Station
+
+```{r}
+#Station_lookup_truncate <- Station_lookup_truncate %>%
+#  rename(Cruise = CRUISE6, 
+#         Station = STATION)
+
+### changed CSV instead. changing this way altered the values from double to character which made the join more difficult.
+
+```
+
+
+###
+
+now I want all of my x values (meas or count) to be returned, but only the y (station values) that match to the meas/count. 
+
+will try a left join first. 
+
+```{r}
+#Concat_Count_Stationjoin <- Concat_Count %>%
+#  left_join(Station_lookup_truncate2,by= "Cruise", "Station")
+
+#view(Concat_Count_Stationjoin)
+
+
+
+```
+
+
+did not work, yielded 399446 observations by 17 variables, included a station.x and a station.y
+try again by containing the column headers
+
+
+```{r}
+#Concat_Count_Stationjoin <- Concat_Count %>%
+#  left_join(Station_lookup_truncate2,by= c("Cruise", #"Station") )
+
+#view(Concat_Count_Stationjoin)
+```
+
+still did not work, when data were imported it read double but it now showing character. 
+manually change to double
+
+```{r}
+
+Concat_Count$Station = as.numeric(as.character(Concat_Count$Station))
+view(Concat_Count)
+
+## got a warning baout NAs by coercion
+
+Concat_Count_Stationjoin <- Concat_Count %>%
+  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  )
+
+view(Concat_Count_Stationjoin)
+```
+
+worked, do the other one then figure out how to export as CSV. Print.to()?
+
+```{r}
+sapply(Concat_Meas, class)
+
+# indicated cruise and station are both numeric, should be okay
+
+Concat_Meas_Stationjoin <- Concat_Meas %>%
+  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  )
+
+view(Concat_Meas_Stationjoin)
+
+
+
+```
+
+GREAT. that worked too. now need to export as CSVs. 
+
+
+```{r}
+#write.csv(Concat_Count_Stationjoin, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Count_station.csv")
+
+#write.csv(Concat_Meas_Stationjoin, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Meas_station.csv")
+
+```
+
+Will write out above later when the ITIS table join is complete, copy and paste, but change names to reflect that it contians info from all three joined CSVs in each case. 
+
+```{r}
+ITIS_lookup <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/ITIS_lookup.csv")
+
+#ITIS_lookup <-  na.omit(ITIS_lookup)
+# this removed ALL the data 
+
+ITIS_lookup <- remove_empty(ITIS_lookup, which  = c("cols"))
+
+view(ITIS_lookup)
+
+```
+
+great that works.
+
+###conversations with stace about the ITIS lookup 
+
+Now create new columns fro ITIS number and sceintific name using a mutate based on preyspp then preytaxa then gut item. 
+
+create 2 empty columns, with the correct columns names (with NAs?) then use code with mutate to fill in, instruct it to take data from ITIS_lookup
+
+for loop by row, 
+if preyspp !is.na then join by colums (Llopiz name form ITIS) ___ else_if() #this function in R
+
+alternate answer:
+make fake column called "Llopiz_taxa" in original CSV, then fill with values from  3 columns 
+
+alternate answer:
+filer then mutate into new columns with selecting the columns i want. 
+
+```{r}
+
+#Concat_Count_Stationjoin %>% 
+# mutate(`Scientific Name` = if_else(PreySpp != is.na && PreySpp == ITIS_lookup$Llopiz_taxa, ITIS_lookup$`Scientific Name`, 
+ #           if_else() ) 
+ #{ 
+# } else if ( PreyTaxa != is.na && PreySpp == #ITIS_lookup$Llopiz_taxa){mutate(`Scientific Name` = ITIS_lookup$`Scientific Name`)
+ #} else ( GutItem == ITIS_lookup$Llopiz_taxa)
+ # {mutate(`Scientific Name` = ITIS_lookup$`Scientific Name`)}
+    
+  
+
+```
+
+can i use a phrase like if ()
+
+column to join on
+
+Concat_count_stationJoin %>%
+mutate (Llopiz_taxa = if_else(is.na(preyspp), if_else(is.na(preyTaxa), gutitem, preytaxa), preyspp) 
+()
+could be done cleaner with case_when
+
+```{r}
+
+Concat_Count_Stationjoin <- Concat_Count_Stationjoin %>%
+mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+
+view(Concat_Count_Stationjoin)
+
+```
+
+needed to add the assignment (<-) to make it work, but the joining column is created.  do the same for the _Meas table
+
+```{r}
+
+Concat_Meas_Stationjoin <- Concat_Meas_Stationjoin %>%
+mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+
+view(Concat_Meas_Stationjoin)
+
+
+```
+
+Now do the L join based on the column Llopiz taxa
+
+```{r}
+Concat_Count_EDI <- Concat_Count_Stationjoin %>%
+  left_join(ITIS_lookup,by= "Llopiz_taxa"
+  )
+view(Concat_Count_EDI)
+
+Concat_Meas_EDI <- Concat_Meas_Stationjoin %>%
+  left_join(ITIS_lookup,by= "Llopiz_taxa"
+  )
+view(Concat_Meas_EDI)
+
+```
+
+Everything is there. would be good to remove columns (year, author, name credibility and usage)
+
+```{r}
+Concat_Count_EDI <- select(Concat_Count_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+
+view(Concat_Count_EDI)
+
+Concat_Meas_EDI <- select(Concat_Meas_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+```
+
+
+FIN
+
+
+
+
+
+
+

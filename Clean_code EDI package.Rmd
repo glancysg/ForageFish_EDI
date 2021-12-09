@@ -1,0 +1,165 @@
+---
+title: "ForageFish EDI submission"
+author: "S. G. Glancy"
+date: "12/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+require(utils)
+require(tibble)
+require(dplyr)
+require(ggplot2)
+require(lubridate)
+require(janitor)
+require(tidyverse)
+
+require(readr)
+
+Concat_Count <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Count.csv")
+
+
+Concat_Meas <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Meas.csv")
+
+
+Station_lookup_truncate2 <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Station_lookup_truncate2.csv")
+```
+need to change BEGIN_GMT_TOWDATE in ISO 8601 format, YYYY-MM-DD HH:MM:SS
+
+```{r}
+
+Station_lookup_truncate2$BEGIN_GMT_TOWDATE <- parse_date_time(Station_lookup_truncate2$BEGIN_GMT_TOWDATE, "mdyHM")
+
+```
+
+read in CSVs for data (measurements and counts) and for station (data from NOAA
+) using readr
+
+Join based on cruise number and station number. 
+
+for join() in R need same column headers. 
+
+change column headers in station table from CRUISE6 to "Cruise" and STATION to "Station
+
+
+
+###
+
+now I want all of my x values (meas or count) to be returned, but only the y (station values) that match to the meas/count. 
+
+will try a left join first. 
+
+
+
+```{r}
+
+Concat_Count$Station = as.numeric(as.character(Concat_Count$Station))
+
+
+## got a warning baout NAs by coercion
+
+Concat_Count_Stationjoin <- Concat_Count %>%
+  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  )
+
+```
+
+worked, do the other one then figure out how to export as CSV. Print.to()?
+
+```{r}
+
+
+# indicated cruise and station are both numeric, should be okay
+
+Concat_Meas_Stationjoin <- Concat_Meas %>%
+  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  )
+
+
+```
+
+GREAT. that worked too. now need to export as CSVs. 
+
+
+```{r}
+ITIS_lookup <- read_csv("C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/ITIS_lookup.csv")
+
+
+ITIS_lookup <- remove_empty(ITIS_lookup, which  = c("cols"))
+
+
+
+```
+
+great that works.
+
+```{r}
+
+Concat_Count_Stationjoin <- Concat_Count_Stationjoin %>%
+mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+
+
+
+```
+
+needed to add the assignment (<-) to make it work, but the joining column is created.  do the same for the _Meas table
+
+```{r}
+
+Concat_Meas_Stationjoin <- Concat_Meas_Stationjoin %>%
+mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+
+
+
+
+```
+
+Now do the L join based on the column Llopiz taxa
+
+```{r}
+Concat_Count_EDI <- Concat_Count_Stationjoin %>%
+  left_join(ITIS_lookup,by= "Llopiz_taxa"
+  )
+view(Concat_Count_EDI)
+
+Concat_Meas_EDI <- Concat_Meas_Stationjoin %>%
+  left_join(ITIS_lookup,by= "Llopiz_taxa"
+  )
+view(Concat_Meas_EDI)
+
+```
+
+Everything is there. would be good to remove columns (year, author, name credibility and usage)
+
+```{r}
+Concat_Count_EDI <- select(Concat_Count_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+
+view(Concat_Count_EDI)
+
+Concat_Meas_EDI <- select(Concat_Meas_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+```
+
+
+FIN
+
+write files
+
+```{r}
+write.csv(Concat_Count_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Count_EDI.csv")
+
+write.csv(Concat_Meas_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Meas_EDI.csv")
+```
+
+
+
+
+
+
+
+
