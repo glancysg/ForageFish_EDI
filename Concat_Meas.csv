@@ -1,4 +1,4 @@
-Cruise,Station,FishSpecies,FishNum,PreyNumber,GutItem,PreyTaxa,PreySpp,Ocularunits,Mag,Prey_mm,Scope,Total_prey,Total_gut,Comments_prey,Comments_gut,FL_mm
+cruise,station,FishSpecies,FishNum,preyNum,preyTaxon,preyTaxa,preySpp,Ocularunits,Mag,prey_mm,Scope,preyCount,gutCount,Comments_prey,Comments_gut,forkLength
 201802,161,P_tri,3,1,Appendicularia,NA,NA,2.2,1.25,1.41025641,M60,NA,21,NA,NA,171
 201802,161,P_tri,3,2,Appendicularia,NA,NA,1.9,1.25,1.217948718,M60,NA,21,NA,NA,171
 201802,161,P_tri,3,3,Appendicularia,NA,NA,1.6,1.25,1.025641026,M60,NA,21,NA,NA,171

@@ -1,4 +1,4 @@
-Cruise,Station,FishSpecies,FishNum,PreyNumber,GutItem,PreyTaxa,PreySpp,Ocularunits,Mag,Prey_mm,Scope,Total_prey,Total_gut,Comments_prey,Comments_gut,FL
+cruise,station,FishSpecies,FishNum,preyNum,preyTaxon,preyTaxa,preySpp,Ocularunits,Mag,prey_mm,Scope,preyCount,gutCount,Comments_prey,Comments_gut,forkLength
 201802,161,P_tri,3,NA,Appendicularia,NA,NA,NA,NA,NA,M60,7,21,NA,NA,171
 201802,161,P_tri,3,NA,Hyperiidae,Hyperia,NA,NA,NA,NA,M60,1,21,NA,NA,171
 201802,161,P_tri,3,NA,UnknownSoft,NA,NA,NA,NA,NA,M60,13,21,NA,NA,171

@@ -1,108 +1,108 @@
-Llopiz_taxa,TSN,Scientific Name,Author,Year,Rank Name,Credibility,Name Usage
-Animalia,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-Acartia,86084,Acartia,NA,NA,Genus,Reviewed,valid
-Americamysis,682489,Americamysis,NA,NA,Genus,Reviewed,valid
-Ammodytes,171671,Ammodytes,NA,NA,Genus,Reviewed,valid
-Amphipoda,93294,Amphipoda,Latreille,1816,Order          ,Reviewed,valid
-Ampithoidae,93408,Ampithoidae,NA,NA,Family,Reviewed,valid
-Egg,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-Parasite,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-ParasiteFlatWorm,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-ParasiticWorm,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-Roundworm,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-UnknownOther,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-UnknownSoft,202423,Animalia,NA,NA,Kingdom,Reviewed,valid
-Aoridae,93440,Aoridae,NA,NA,Family,Reviewed,valid
-Appendicularia,159664,Appendicularia,NA,NA,Class          ,Reviewed,valid
-Bivalvia,79118,Bivalvia,Linnaeus,1758,Class          ,Reviewed,valid
-Calanoida,85258,Calanoida,G. O. Sars,1903,Order          ,Reviewed,valid
-CalanoidSmall,85258,Calanoida,NA,NA,NA,NA,NA
-CalanoidDigested,85258,Calanoida,NA,NA,NA,NA,NA
-Calanus,85263,Calanus,Leach,1819,Genus          ,Reviewed,valid
-Caligidae,89008,Caligidae,Burmeister,1834,Family         ,Reviewed,valid
-Candacia,86020,Candacia,Dana,1846,Genus          ,Reviewed,valid
-Caprellidae,95375,Caprellidae,Leach,1814,Family         ,Reviewed,valid
-Caridea,96106,Caridea,Dana,1852,Infraorder     ,Reviewed,valid
-Centropages,85761,Centropages,Krøyer,1849,Genus          ,Reviewed,valid
-Cephalopoda,82326,Cephalopoda,Cuvier,1797,Class          ,Reviewed,valid
-Chaetognatha,158650,Chaetognatha,NA,NA,Phylum         ,Reviewed,valid
-Cirripedia,89433,Cirripedia,Burmeister,1834,Infraclass,Reviewed,valid
-Cladocera,83832,Cladocera,Latreille,1829,Suborder       ,Reviewed,valid
-Clione,78088,Clione,NA,NA,Genus,Reviewed,valid
-Coleoidea,82330,Coleoidea,Bather,1888,Subclass       ,Reviewed,valid
-Copepoda,85257,Copepoda,Milne-Edwards,1840,Subclass       ,Reviewed,valid
-CopepodDigested,85257,Copepoda,NA,NA,NA,NA,NA
-CopepodUnknown,85257,Copepoda,NA,NA,NA,NA,NA
-Corophiidae,93584,Corophiidae,NA,NA,Family,Reviewed,valid
-Corycaeus,88571,Corycaeus,NA,NA,Genus,Reviewed,valid
-Cumacea,90745,Cumacea,Krøyer,1846,Order          ,Reviewed,valid
-Cyclopoida,88530,Cyclopoida,Burmeister,1834,Order          ,Reviewed,valid
-Decapoda,95599,Decopoda,Latreille,1802,Order          ,Reviewed,valid
-Eucalanus,85300,Eucalanus,Dana,1852,Genus          ,Reviewed,valid
-Euphausia,95501,Euphausia,Dana,1852,Genus,Reviewed,valid
-Euphausiacea,95496,Euphausiacea,NA,NA,Order,Reviewed,valid
-Euphausiidae,95500,Euphausiidae,Dana,1852,Family         ,Reviewed,valid
-Eurytemora,85862,Eurytemora,NA,NA,Genus,Reviewed,valid
-Foraminiferida,44030,Foraminiferida,NA,NA,Order          ,Reviewed,valid
-Gammaridea,93295,Gammaridea,Latreille,1802,Suborder       ,Reviewed,valid
-Gammarus,93773,Gammarus,NA,NA,Genus,Reviewed,valid
-Gastropoda,69459,Gastropoda,Cuvier,1797,Class          ,Reviewed,valid
-Gnathostomata,914179,Gnathostomata,Zittel,1879,Superclass     ,Reviewed,valid
-Osteichthyes,914179,Gnathostomata,NA,NA,NA,NA,NA
-FishEgg,914179,Gnathostomata,NA,NA,NA,NA,NA
-FishRemains,914179,Gnathostomata,NA,NA,NA,NA,NA
-FishLarvae,914179,Gnathostomata,NA,NA,NA,NA,NA
-Harpacticoida,86110,Harpacticoida,G. O. Sars,1903,Order          ,Reviewed,valid
-Haustoriidae,93959,Haustoriidae,NA,NA,Family,Reviewed,valid
-Hydrachnidae,83122,Hydrachnidae,NA,NA,Family         ,Reviewed,valid
-Hyperia,95109,Hyperia,NA,NA,Genus,Reviewed,valid
-Hyperiella,95120,Hyperiella,NA,NA,Genus,Reviewed,valid
-Hyperiidae,95108,Hyperiidae,Dana,1853,Family         ,Reviewed,valid
-Isopoda,92120,Isopoda,Latreille,1817,Order          ,Reviewed,valid
-Liljeborgiidae,94205,Liljeborgiidae,NA,NA,Family,Reviewed,valid
-Limacina,76336,Limacina,NA,NA,Genus,Reviewed,valid
-Lycaenidae,117236,Lycaenidae,NA,NA,Family,Reviewed,valid
-Shrimp Zooae,89787,Malacostraca,NA,NA,Class,Reviewed,valid
-Crab Zooea,89787,Malacostraca,NA,NA,Class,Reviewed,valid
-Meganyctiphanes,95533,Meganyctiphanes,NA,NA,Genus,Reviewed,valid
-Melittidae,154364,Melittidae,NA,NA,Family,Reviewed,valid
-Metridia,85734,Metridia,Boeck,1865,Genus          ,Reviewed,valid
-Microsetella,86208,Microsetella,NA,NA,Genus,Reviewed,valid
-Monstrilloida,88989,Monstrilloida,Sars,1901,Order          ,Reviewed,valid
-Mysida,89855,Mysida,Boas,1833,Order          ,Reviewed,valid
-Nematoscelis,95539,Nematoscelis,NA,NA,Genus,Reviewed,valid
-Neomysis,90054,Neomysis,NA,NA,Genus,Reviewed,valid
-Oikopleura,159664,Oikopleura,NA,NA,Class,Reviewed,valid
-Oithona,88802,Oithona,Baird,1843,Genus          ,Reviewed,valid
-Ostracoda,84195,Ostracoda,Latreille,1802,Class          ,Reviewed,valid
-Paraeuchaeta,610024,Paraeuchaeta,A. Scott,1909,Genus          ,Reviewed,valid
-Paraphronima,95371,Paraphronima,NA,NA,Genus,Reviewed,valid
-Parathemisto,95148,Parathemisto,NA,NA,Genus,Reviewed,valid
-Penaeidae,95602,Penaeidae,Rafinesque,1815,Family         ,Reviewed,valid
-Penilia,83835,Penilia,Dana,1849,Genus          ,Reviewed,valid
-Penilia avirostris,83836,Penilia avirostris,NA,NA,Species,Reviewed,valid
-Phronima,95173,Phronima,NA,NA,Genus,Reviewed,valid
-Phronimidae,95172,Phronimidae,NA,NA,Family,Reviewed,valid
-Pleuromamma,85751,Pleuromamma,Giesbrecht,1898,Genus          ,Reviewed,valid
-Podon,83964,Podon,Lilljeborg,1853,Genus          ,Reviewed,valid
-Polychaeta,64358,Polychaeta,NA,NA,Class          ,Reviewed,valid
-Pronoidae,95200,Pronoidae,NA,NA,Family,Reviewed,valid
-Pseudocalanus,85369,Pseudocalanus,NA,NA,Genus,Reviewed,valid
-Pseudodiaptomas,85848,Pseudodiaptomus,NA,NA,Genus,Reviewed,valid
-Rhincalanus,85316,Rhincalanus,NA,NA,Genus,Reviewed,valid
-Sapphirina,88831,Sapphirina,NA,NA,Genus,Reviewed,valid
-Sapphirinidae,88830,Sapphirinidae,Thorell,1860,Family         ,Reviewed,valid
-Siphonostomatoida,610010,Siphonostomatoida,NA,NA,Order,Reviewed,valid
-Temora,85874,Temora,Baird,1850,Genus          ,Reviewed,valid
-Temora longicornis,85877,Temora longicornis,NA,NA,Species,Reviewed,valid
-Thaliacea,159632,Thaliacea,NA,NA,Class,Reviewed,valid
-Thecosomata,76333,Thecosomata,NA,NA,Order          ,Reviewed,valid
-Pteropoda,76333,Thecosomata,NA,NA,Order,Reviewed,valid
-Themistella,95164,Themistella,NA,NA,Genus,Reviewed,valid
-Themisto,95167,Themisto,NA,NA,Genus,Reviewed,valid
-Thysanoessa,95571,Thysanoessa,NA,NA,Genus,Reviewed,valid
-Thysanopoda,95582,Thysanopoda,NA,NA,Genus,Reviewed,valid
-Tomopteridae,65459,Tomopteridae,Johnston,1865,Family         ,Reviewed,valid
-Tomopteris,65460,Tomopteris,NA,NA,Genus,Reviewed,valid
-Tortanus,86099,Tortanus,Giesbrecht,1898,Genus          ,Reviewed,valid
-Tortanus discaudatus,86100,Tortanus discaudatus,NA,NA,Species,Reviewed,valid
+Llopiz_taxa,scientificNameID_preyTaxon,scientificName_preyTaxon,scientificName_Rank,Credibility,NameUsage
+Animalia,202423,Animalia,Kingdom,Reviewed,valid
+Acartia,86084,Acartia,Genus,Reviewed,valid
+Americamysis,682489,Americamysis,Genus,Reviewed,valid
+Ammodytes,171671,Ammodytes,Genus,Reviewed,valid
+Amphipoda,93294,Amphipoda,Order          ,Reviewed,valid
+Ampithoidae,93408,Ampithoidae,Family,Reviewed,valid
+Egg,202423,Animalia,Kingdom,Reviewed,valid
+Parasite,202423,Animalia,Kingdom,Reviewed,valid
+ParasiteFlatWorm,202423,Animalia,Kingdom,Reviewed,valid
+ParasiticWorm,202423,Animalia,Kingdom,Reviewed,valid
+Roundworm,202423,Animalia,Kingdom,Reviewed,valid
+UnknownOther,202423,Animalia,Kingdom,Reviewed,valid
+UnknownSoft,202423,Animalia,Kingdom,Reviewed,valid
+Aoridae,93440,Aoridae,Family,Reviewed,valid
+Appendicularia,159664,Appendicularia,Class          ,Reviewed,valid
+Bivalvia,79118,Bivalvia,Class          ,Reviewed,valid
+Calanoida,85258,Calanoida,Order          ,Reviewed,valid
+CalanoidSmall,85258,Calanoida,NA,NA,NA
+CalanoidDigested,85258,Calanoida,NA,NA,NA
+Calanus,85263,Calanus,Genus          ,Reviewed,valid
+Caligidae,89008,Caligidae,Family         ,Reviewed,valid
+Candacia,86020,Candacia,Genus          ,Reviewed,valid
+Caprellidae,95375,Caprellidae,Family         ,Reviewed,valid
+Caridea,96106,Caridea,Infraorder     ,Reviewed,valid
+Centropages,85761,Centropages,Genus          ,Reviewed,valid
+Cephalopoda,82326,Cephalopoda,Class          ,Reviewed,valid
+Chaetognatha,158650,Chaetognatha,Phylum         ,Reviewed,valid
+Cirripedia,89433,Cirripedia,Infraclass,Reviewed,valid
+Cladocera,83832,Cladocera,Suborder       ,Reviewed,valid
+Clione,78088,Clione,Genus,Reviewed,valid
+Coleoidea,82330,Coleoidea,Subclass       ,Reviewed,valid
+Copepoda,85257,Copepoda,Subclass       ,Reviewed,valid
+CopepodDigested,85257,Copepoda,NA,NA,NA
+CopepodUnknown,85257,Copepoda,NA,NA,NA
+Corophiidae,93584,Corophiidae,Family,Reviewed,valid
+Corycaeus,88571,Corycaeus,Genus,Reviewed,valid
+Cumacea,90745,Cumacea,Order          ,Reviewed,valid
+Cyclopoida,88530,Cyclopoida,Order          ,Reviewed,valid
+Decapoda,95599,Decopoda,Order          ,Reviewed,valid
+Eucalanus,85300,Eucalanus,Genus          ,Reviewed,valid
+Euphausia,95501,Euphausia,Genus,Reviewed,valid
+Euphausiacea,95496,Euphausiacea,Order,Reviewed,valid
+Euphausiidae,95500,Euphausiidae,Family         ,Reviewed,valid
+Eurytemora,85862,Eurytemora,Genus,Reviewed,valid
+Foraminiferida,44030,Foraminiferida,Order          ,Reviewed,valid
+Gammaridea,93295,Gammaridea,Suborder       ,Reviewed,valid
+Gammarus,93773,Gammarus,Genus,Reviewed,valid
+Gastropoda,69459,Gastropoda,Class          ,Reviewed,valid
+Gnathostomata,914179,Gnathostomata,Superclass     ,Reviewed,valid
+Osteichthyes,914179,Gnathostomata,NA,NA,NA
+FishEgg,914179,Gnathostomata,NA,NA,NA
+FishRemains,914179,Gnathostomata,NA,NA,NA
+FishLarvae,914179,Gnathostomata,NA,NA,NA
+Harpacticoida,86110,Harpacticoida,Order          ,Reviewed,valid
+Haustoriidae,93959,Haustoriidae,Family,Reviewed,valid
+Hydrachnidae,83122,Hydrachnidae,Family         ,Reviewed,valid
+Hyperia,95109,Hyperia,Genus,Reviewed,valid
+Hyperiella,95120,Hyperiella,Genus,Reviewed,valid
+Hyperiidae,95108,Hyperiidae,Family         ,Reviewed,valid
+Isopoda,92120,Isopoda,Order          ,Reviewed,valid
+Liljeborgiidae,94205,Liljeborgiidae,Family,Reviewed,valid
+Limacina,76336,Limacina,Genus,Reviewed,valid
+Lycaenidae,117236,Lycaenidae,Family,Reviewed,valid
+Shrimp Zooae,89787,Malacostraca,Class,Reviewed,valid
+Crab Zooea,89787,Malacostraca,Class,Reviewed,valid
+Meganyctiphanes,95533,Meganyctiphanes,Genus,Reviewed,valid
+Melittidae,154364,Melittidae,Family,Reviewed,valid
+Metridia,85734,Metridia,Genus          ,Reviewed,valid
+Microsetella,86208,Microsetella,Genus,Reviewed,valid
+Monstrilloida,88989,Monstrilloida,Order          ,Reviewed,valid
+Mysida,89855,Mysida,Order          ,Reviewed,valid
+Nematoscelis,95539,Nematoscelis,Genus,Reviewed,valid
+Neomysis,90054,Neomysis,Genus,Reviewed,valid
+Oikopleura,159664,Oikopleura,Class,Reviewed,valid
+Oithona,88802,Oithona,Genus          ,Reviewed,valid
+Ostracoda,84195,Ostracoda,Class          ,Reviewed,valid
+Paraeuchaeta,610024,Paraeuchaeta,Genus          ,Reviewed,valid
+Paraphronima,95371,Paraphronima,Genus,Reviewed,valid
+Parathemisto,95148,Parathemisto,Genus,Reviewed,valid
+Penaeidae,95602,Penaeidae,Family         ,Reviewed,valid
+Penilia,83835,Penilia,Genus          ,Reviewed,valid
+Penilia avirostris,83836,Penilia avirostris,Species,Reviewed,valid
+Phronima,95173,Phronima,Genus,Reviewed,valid
+Phronimidae,95172,Phronimidae,Family,Reviewed,valid
+Pleuromamma,85751,Pleuromamma,Genus          ,Reviewed,valid
+Podon,83964,Podon,Genus          ,Reviewed,valid
+Polychaeta,64358,Polychaeta,Class          ,Reviewed,valid
+Pronoidae,95200,Pronoidae,Family,Reviewed,valid
+Pseudocalanus,85369,Pseudocalanus,Genus,Reviewed,valid
+Pseudodiaptomas,85848,Pseudodiaptomus,Genus,Reviewed,valid
+Rhincalanus,85316,Rhincalanus,Genus,Reviewed,valid
+Sapphirina,88831,Sapphirina,Genus,Reviewed,valid
+Sapphirinidae,88830,Sapphirinidae,Family         ,Reviewed,valid
+Siphonostomatoida,610010,Siphonostomatoida,Order,Reviewed,valid
+Temora,85874,Temora,Genus          ,Reviewed,valid
+Temora longicornis,85877,Temora longicornis,Species,Reviewed,valid
+Thaliacea,159632,Thaliacea,Class,Reviewed,valid
+Thecosomata,76333,Thecosomata,Order          ,Reviewed,valid
+Pteropoda,76333,Thecosomata,Order,Reviewed,valid
+Themistella,95164,Themistella,Genus,Reviewed,valid
+Themisto,95167,Themisto,Genus,Reviewed,valid
+Thysanoessa,95571,Thysanoessa,Genus,Reviewed,valid
+Thysanopoda,95582,Thysanopoda,Genus,Reviewed,valid
+Tomopteridae,65459,Tomopteridae,Family         ,Reviewed,valid
+Tomopteris,65460,Tomopteris,Genus,Reviewed,valid
+Tortanus,86099,Tortanus,Genus          ,Reviewed,valid
+Tortanus discaudatus,86100,Tortanus discaudatus,Species,Reviewed,valid
