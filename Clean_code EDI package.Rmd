@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
+
+
 require(utils)
 require(tibble)
 require(dplyr)
@@ -59,13 +61,13 @@ will try a left join first.
 
 ```{r}
 
-Concat_Count$Station = as.numeric(as.character(Concat_Count$Station))
+Concat_Count$station = as.numeric(as.character(Concat_Count$station))
 
 
 ## got a warning baout NAs by coercion
 
 Concat_Count_Stationjoin <- Concat_Count %>%
-  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  left_join(Station_lookup_truncate2,by= c("cruise", "station")
   )
 
 ```
@@ -78,7 +80,7 @@ worked, do the other one then figure out how to export as CSV. Print.to()?
 # indicated cruise and station are both numeric, should be okay
 
 Concat_Meas_Stationjoin <- Concat_Meas %>%
-  left_join(Station_lookup_truncate2,by= c("Cruise", "Station")
+  left_join(Station_lookup_truncate2,by= c("cruise", "station")
   )
 
 
@@ -102,7 +104,7 @@ great that works.
 ```{r}
 
 Concat_Count_Stationjoin <- Concat_Count_Stationjoin %>%
-mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+mutate(Llopiz_taxa = (if_else(is.na(preySpp), if_else(is.na(preyTaxa), preyTaxon, preyTaxa), preySpp) ))
 
 
 
@@ -113,7 +115,7 @@ needed to add the assignment (<-) to make it work, but the joining column is cre
 ```{r}
 
 Concat_Meas_Stationjoin <- Concat_Meas_Stationjoin %>%
-mutate(Llopiz_taxa = (if_else(is.na(PreySpp), if_else(is.na(PreyTaxa), GutItem, PreyTaxa), PreySpp) ))
+mutate(Llopiz_taxa = (if_else(is.na(preySpp), if_else(is.na(preyTaxa), preyTaxon, preyTaxa), preySpp) ))
 
 
 
@@ -138,11 +140,13 @@ view(Concat_Meas_EDI)
 Everything is there. would be good to remove columns (year, author, name credibility and usage)
 
 ```{r}
-Concat_Count_EDI <- select(Concat_Count_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+Concat_Count_EDI <- select(Concat_Count_EDI,  - NameUsage, -Credibility)
 
 view(Concat_Count_EDI)
 
-Concat_Meas_EDI <- select(Concat_Meas_EDI, -Year, -Author, - `Name Usage`, -Credibility)
+Concat_Meas_EDI <- select(Concat_Meas_EDI, - NameUsage, -Credibility)
+
+view(Concat_Meas_EDI)
 ```
 
 
