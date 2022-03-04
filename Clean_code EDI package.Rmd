@@ -155,9 +155,11 @@ FIN
 write files
 
 ```{r}
-write.csv(Concat_Count_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Count_EDI.csv")
+write.csv(Concat_Count_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/ForageFish_EDI/Concat_Count_EDI.csv")
 
-write.csv(Concat_Meas_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/Concat_Meas_EDI.csv")
+write.csv(Concat_Meas_EDI, "C:/Users/Sarah/Desktop/Glancy/LTER/2021_EDIprep/ForageFish_EDI/Concat_Meas_EDI.csv")
+
+
 ```
 
 
